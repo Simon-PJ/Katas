@@ -10,7 +10,7 @@ namespace DotNetKatas.StringCalculatorKata
             if (string.IsNullOrEmpty(numbers))
                 return 0;
 
-            var splitNumbers = numbers.Split(',');
+            var splitNumbers = numbers.Split(',', '\n');
 
             return splitNumbers.Sum(x => Convert.ToInt32(x));
         }
