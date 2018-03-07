@@ -15,7 +15,7 @@ namespace DotNetKatas.StringSumKata
         }
 
         [Fact]
-        public void InvalidArgumentsResultsInZero()
+         void InvalidArgumentsResultsInZero()
         {
             Assert.Equal("0", StringSum.Sum("a", "b"));
             Assert.Equal("0", StringSum.Sum("~", "£"));

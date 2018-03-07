@@ -62,18 +62,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringCalculatorKata\StringCalculator.cs" />
+    <Compile Include="StringCalculatorKata\StringCalculatorTests.cs" />
     <Compile Include="StringSumKata\StringSum.cs" />
     <Compile Include="StringSumKata\StringSumTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="StringSumKata\readme.md" />
+    <None Include="StringSumKata\StringSumKata.md" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StringCalculatorKata\StringCalculator.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

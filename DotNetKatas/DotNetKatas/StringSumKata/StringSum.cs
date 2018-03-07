@@ -2,7 +2,7 @@
 
 namespace DotNetKatas.StringSumKata
 {
-    public class StringSum
+    class StringSum
     {
         internal static string Sum(string num1, string num2)
         {
