@@ -10,7 +10,16 @@ namespace DotNetKatas.StringCalculatorKata
             if (string.IsNullOrEmpty(numbers))
                 return 0;
 
-            var splitNumbers = numbers.Split(',', '\n');
+            var delimeters = new[] { ',', '\n' };
+
+            if (numbers.StartsWith("//"))
+            {
+                delimeters = new[] { numbers[2] };
+
+                numbers = numbers.Substring(4);
+            }
+
+            var splitNumbers = numbers.Split(delimeters);
 
             return splitNumbers.Sum(x => Convert.ToInt32(x));
         }

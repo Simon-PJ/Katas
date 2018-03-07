@@ -47,6 +47,17 @@ namespace DotNetKatas.StringCalculatorKata
         public void WorksWithCommaAndLineBreakDelimeterMixture()
         {
             Assert.Equal(6, StringCalculator.Add("1\n2,3"));
+
+        }
+
+        [Fact]
+        public void CustomDelimeters()
+        {
+            Assert.Equal(3, StringCalculator.Add(@"//;\1;2"));
+            Assert.Equal(3, StringCalculator.Add(@"//.\1.2"));
+            Assert.Equal(3, StringCalculator.Add(@"//t\1t2"));
+            Assert.Equal(10, StringCalculator.Add(@"///\4/2/3/1"));
+            Assert.Equal(10, StringCalculator.Add(@"//\\4\2\3\1"));
         }
     }
 }

@@ -13,6 +13,6 @@
 	- The following input is ok: "1\n2,3" (will equal 6)
 	- The following input is not ok: "1,\n"
 - Support different delimeters
-	- To change a delimete, the beginning of the string will contain a separate line that looks like this:
-	  "//[delimeter]\n[numbers...]" for example "//;\n1;2" should return three where the default delimeter is ';'.
+	- To change a delimeter, the beginning of the string will contain a separate line that looks like this:
+	  "//[delimeter]\n[numbers...]" for example "//;\n1;2" should return three where the default delimeter is ';'
 	- The first line is optional. All existing scenarios should still be supported
