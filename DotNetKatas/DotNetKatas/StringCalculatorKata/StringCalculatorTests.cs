@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using System;
+using Xunit;
 
 namespace DotNetKatas.StringCalculatorKata
 {
@@ -58,6 +59,38 @@ namespace DotNetKatas.StringCalculatorKata
             Assert.Equal(3, StringCalculator.Add(@"//t\1t2"));
             Assert.Equal(10, StringCalculator.Add(@"///\4/2/3/1"));
             Assert.Equal(10, StringCalculator.Add(@"//\\4\2\3\1"));
+            Assert.Equal(5, StringCalculator.Add(@"//-\1-4"));
+        }
+
+        [Fact]
+        public void NegativeNumbersInInputThrowsException()
+        {
+            Assert.Throws<Exception>(() => StringCalculator.Add("-1"));
+            Assert.Throws<Exception>(() => StringCalculator.Add("-1,4"));
+        }
+
+        [Fact]
+        public void NegativesExceptionHasCorrectMessage()
+        {
+            var standardMessage = "negatives not allowed";
+
+            Assert.Equal($"{standardMessage}: -1", CauseException(() => StringCalculator.Add("-1")).Message);
+            Assert.Equal($"{standardMessage}: -1,-2", CauseException(() => StringCalculator.Add("-1,-2")).Message);
+            Assert.Equal($"{standardMessage}: -1,-8", CauseException(() => StringCalculator.Add("-1,5,6,-8")).Message);
+        }
+
+        private Exception CauseException(Action action)
+        {
+            try
+            {
+                action();
+            }
+            catch (Exception e)
+            {
+                return e;
+            }
+
+            return null;
         }
     }
 }

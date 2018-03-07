@@ -16,3 +16,5 @@
 	- To change a delimeter, the beginning of the string will contain a separate line that looks like this:
 	  "//[delimeter]\n[numbers...]" for example "//;\n1;2" should return three where the default delimeter is ';'
 	- The first line is optional. All existing scenarios should still be supported
+- Calling Add with a negative number will throw an exception "negatives not allowed" - and the negative that was passed.
+  If there are multiple negatives, show all of them in the exception message
