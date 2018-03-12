@@ -79,6 +79,21 @@ namespace DotNetKatas.StringCalculatorKata
             Assert.Equal($"{standardMessage}: -1,-8", CauseException(() => StringCalculator.Add("-1,5,6,-8")).Message);
         }
 
+        [Fact]
+        public void NumbersBiggerThan1000AreIgnored()
+        {
+            Assert.Equal(0, StringCalculator.Add("1000"));
+            Assert.Equal(5, StringCalculator.Add("1000,3,2"));
+            Assert.Equal(1, StringCalculator.Add(@"//~\1000~1"));
+        }
+
+        [Fact]
+        public void DelimetersCanBeOfAnylength()
+        {
+            Assert.Equal(6, StringCalculator.Add("//[***]\n1***2***3"));
+            Assert.Equal(6, StringCalculator.Add("//[delimeter]\n1delimeter2delimeter3"));
+        }
+
         private Exception CauseException(Action action)
         {
             try

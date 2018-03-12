@@ -13,21 +13,34 @@ namespace DotNetKatas.StringCalculatorKata
             if (string.IsNullOrEmpty(numbers))
                 return 0;
 
-            var delimeters = new[] { ',', '\n' };
+            var delimeters = new[] { ",", "\n" };
 
             if (numbers.StartsWith("//"))
             {
-                delimeters = new[] { numbers[2] };
+                if (numbers.Contains("[") && numbers.Contains("]"))
+                {
+                    var firstSquareBracket = numbers.IndexOf('[');
+                    var secondSquareBracket = numbers.IndexOf(']');
+                    var delimeter = numbers.Substring(firstSquareBracket + 1, secondSquareBracket - firstSquareBracket - 1);
 
-                numbers = numbers.Substring(4);
+                    delimeters = new[] { delimeter };
+
+                    numbers = numbers.Substring(secondSquareBracket + 2);
+                }
+                else
+                {
+                    delimeters = new[] { numbers[2].ToString() };
+
+                    numbers = numbers.Substring(4);
+                }
             }
 
             return GetSum(numbers, delimeters);
         }
 
-        private static int GetSum(string numbers, char[] delimeters)
+        private static int GetSum(string numbers, string[] delimeters)
         {
-            var splitNumbers = numbers.Split(delimeters);
+            var splitNumbers = numbers.Split(delimeters, StringSplitOptions.None);
 
             var sum = 0;
 
@@ -40,7 +53,8 @@ namespace DotNetKatas.StringCalculatorKata
                 if (intNum < 0)
                     negativeNumbers.Add(intNum);
 
-                sum += intNum;
+                if (intNum < 1000)
+                    sum += intNum;
             }
 
             if (negativeNumbers.Count > 0)
