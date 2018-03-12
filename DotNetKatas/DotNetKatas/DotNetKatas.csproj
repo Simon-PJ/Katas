@@ -66,10 +66,13 @@
     <Compile Include="StringCalculatorKata\StringCalculatorTests.cs" />
     <Compile Include="StringSumKata\StringSum.cs" />
     <Compile Include="StringSumKata\StringSumTests.cs" />
+    <Compile Include="TheBowlingGameKata\BowlingGameTest.cs" />
+    <Compile Include="TheBowlingGameKata\Game.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="StringSumKata\StringSumKata.md" />
+    <None Include="TheBowlingGameKata\TheBowlingGameKata.md" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
