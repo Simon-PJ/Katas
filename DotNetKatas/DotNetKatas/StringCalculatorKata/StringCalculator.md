@@ -21,3 +21,5 @@
 - Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2
 - Delimeters can be of any length with the following format: "//[delimeter]\n". For example "//[---]\n1---2---3"
   should return 6
+- Allow multiple delimeters like this: "//[delim1][delim2]\n" for example "//[-][%]\n1-2%3" should return 6
+- Make sure you can also handle multiple delimeters with length longer than one char

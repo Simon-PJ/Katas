@@ -19,13 +19,22 @@ namespace DotNetKatas.StringCalculatorKata
             {
                 if (numbers.Contains("[") && numbers.Contains("]"))
                 {
-                    var firstSquareBracket = numbers.IndexOf('[');
-                    var secondSquareBracket = numbers.IndexOf(']');
-                    var delimeter = numbers.Substring(firstSquareBracket + 1, secondSquareBracket - firstSquareBracket - 1);
+                    var delims = new List<string>();
 
-                    delimeters = new[] { delimeter };
+                    while (numbers.Contains("["))
+                    {
+                        var firstSquareBracket = numbers.IndexOf('[');
+                        var secondSquareBracket = numbers.IndexOf(']');
+                        var delimeter = numbers.Substring(firstSquareBracket + 1, secondSquareBracket - firstSquareBracket - 1);
 
-                    numbers = numbers.Substring(secondSquareBracket + 2);
+                        delims.Add(delimeter);
+
+                        numbers = numbers.Substring(secondSquareBracket + 1);
+                    }
+
+                    delimeters = delims.ToArray();
+
+                    numbers = numbers.Substring(1);
                 }
                 else
                 {

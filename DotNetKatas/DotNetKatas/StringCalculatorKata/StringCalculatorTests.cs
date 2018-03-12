@@ -94,6 +94,13 @@ namespace DotNetKatas.StringCalculatorKata
             Assert.Equal(6, StringCalculator.Add("//[delimeter]\n1delimeter2delimeter3"));
         }
 
+        [Fact]
+        public void HandlesMultipleDelimeters()
+        {
+            Assert.Equal(6, StringCalculator.Add("//[-][%]\n1-2%3"));
+            Assert.Equal(6, StringCalculator.Add("//[delim][*&^]\n1delim2*&^3"));
+        }
+
         private Exception CauseException(Action action)
         {
             try
