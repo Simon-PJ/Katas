@@ -11,7 +11,10 @@ namespace DotNetKatas.OddEvenKata
 
             for (var i = 1; i <= 100; i++)
             {
-                output.Append($"{i} ");
+                if (i % 2 == 0)
+                    output.Append($"Even ");
+                else
+                    output.Append($"{i} ");
             }
 
             return output.ToString().Trim();
