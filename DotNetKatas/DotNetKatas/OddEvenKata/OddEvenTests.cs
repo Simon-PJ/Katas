@@ -48,10 +48,7 @@ namespace DotNetKatas.OddEvenKata
 
         private string GetNumber(int number)
         {
-            var result = OddEven.Print(1, number);
-            var numbers = result.Split(' ');
-
-            return numbers[number - 1];
+            return OddEven.PrintNumber(number);
         }
     }
 }

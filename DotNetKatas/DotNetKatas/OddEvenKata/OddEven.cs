@@ -11,15 +11,20 @@ namespace DotNetKatas.OddEvenKata
 
             for (var i = min; i <= max; i++)
             {
-                if (i % 2 == 0)
-                    output.Append($"Even ");
-                else if (i % 2 != 0 && !IsPrime(i))
-                    output.Append($"Odd ");
-                else
-                    output.Append($"{i} ");
+                output.Append($"{PrintNumber(i)} ");
             }
 
             return output.ToString().Trim();
+        }
+
+        internal static string PrintNumber(int number)
+        {
+            if (number % 2 == 0)
+                return "Even";
+            else if (!IsPrime(number))
+                return "Odd";
+            else
+                return number.ToString();
         }
 
         private static bool IsPrime(int number)
