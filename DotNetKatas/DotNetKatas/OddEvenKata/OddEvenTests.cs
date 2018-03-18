@@ -6,12 +6,10 @@ namespace DotNetKatas.OddEvenKata
     public class OddEvenTests
     {
         [Fact]
-        public void PrintsNumbersOneToOneHundred()
+        public void PrintsGivenRange()
         {
-            var result = OddEven.Print();
-            var numbers = result.Split(' ');
-
-            Assert.Equal(100, numbers.Length);
+            Assert.Equal(100, GetCount(1, 100));
+            Assert.Equal(39, GetCount(35, 73));
         }
 
         [Fact]
@@ -40,9 +38,17 @@ namespace DotNetKatas.OddEvenKata
             Assert.Equal("97", GetNumber(97));
         }
 
+        private int GetCount(int min, int max)
+        {
+            var result = OddEven.Print(min, max);
+            var numbers = result.Split(' ');
+
+            return numbers.Length;
+        }
+
         private string GetNumber(int number)
         {
-            var result = OddEven.Print();
+            var result = OddEven.Print(1, number);
             var numbers = result.Split(' ');
 
             return numbers[number - 1];

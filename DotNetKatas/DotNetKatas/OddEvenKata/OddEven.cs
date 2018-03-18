@@ -5,11 +5,11 @@ namespace DotNetKatas.OddEvenKata
 {
     class OddEven
     {
-        internal static string Print()
+        internal static string Print(int min, int max)
         {
             var output = new StringBuilder();
 
-            for (var i = 1; i <= 100; i++)
+            for (var i = min; i <= max; i++)
             {
                 if (i % 2 == 0)
                     output.Append($"Even ");
