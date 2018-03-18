@@ -63,6 +63,8 @@
   <ItemGroup>
     <Compile Include="FizzBuzzKata\FizzBuzz.cs" />
     <Compile Include="FizzBuzzKata\FizzBuzzTests.cs" />
+    <Compile Include="OddEvenKata\OddEven.cs" />
+    <Compile Include="OddEvenKata\OddEvenTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringCalculatorKata\StringCalculator.cs" />
     <Compile Include="StringCalculatorKata\StringCalculatorTests.cs" />
@@ -73,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FizzBuzzKata\FizzBuzzKata.md" />
+    <None Include="OddEvenKata\OddEvenKata.md" />
     <None Include="packages.config" />
     <None Include="StringSumKata\StringSumKata.md" />
     <None Include="TheBowlingGameKata\TheBowlingGameKata.md" />
@@ -86,6 +89,7 @@
   <ItemGroup>
     <None Include="StringCalculatorKata\StringCalculator.md" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
