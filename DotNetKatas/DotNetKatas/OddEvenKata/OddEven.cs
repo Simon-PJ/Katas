@@ -13,6 +13,8 @@ namespace DotNetKatas.OddEvenKata
             {
                 if (i % 2 == 0)
                     output.Append($"Even ");
+                else if (i % 2 != 0)
+                    output.Append($"Odd ");
                 else
                     output.Append($"{i} ");
             }
