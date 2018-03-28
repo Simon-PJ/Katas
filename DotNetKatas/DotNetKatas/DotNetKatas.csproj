@@ -61,6 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalcStatsKata\CalcStats.cs" />
+    <Compile Include="CalcStatsKata\CalcStatsTests.cs" />
     <Compile Include="FizzBuzzKata\FizzBuzz.cs" />
     <Compile Include="FizzBuzzKata\FizzBuzzTests.cs" />
     <Compile Include="OddEvenKata\OddEven.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="TheBowlingGameKata\Game.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="CalcStatsKata\CalcStatsKata.md" />
     <None Include="FizzBuzzKata\FizzBuzzKata.md" />
     <None Include="OddEvenKata\OddEvenKata.md" />
     <None Include="packages.config" />
