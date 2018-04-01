@@ -65,6 +65,8 @@
     <Compile Include="CalcStatsKata\CalcStatsTests.cs" />
     <Compile Include="FizzBuzzKata\FizzBuzz.cs" />
     <Compile Include="FizzBuzzKata\FizzBuzzTests.cs" />
+    <Compile Include="GameOfLifeKata\GameOfLife.cs" />
+    <Compile Include="GameOfLifeKata\GameOfLifeTests.cs" />
     <Compile Include="OddEvenKata\OddEven.cs" />
     <Compile Include="OddEvenKata\OddEvenTests.cs" />
     <Compile Include="PrimeFactorsKata\PrimeFactors.cs" />
@@ -80,6 +82,7 @@
   <ItemGroup>
     <None Include="CalcStatsKata\CalcStatsKata.md" />
     <None Include="FizzBuzzKata\FizzBuzzKata.md" />
+    <None Include="GameOfLifeKata\GameOfLifeKata.md" />
     <None Include="OddEvenKata\OddEvenKata.md" />
     <None Include="packages.config" />
     <None Include="PrimeFactorsKata\PrimeFactorsKata.md" />
