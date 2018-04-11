@@ -48,10 +48,13 @@ let ``Can decode given a secret keyword`` input keyword expected =
 [<InlineData("a", "a", "a")>]
 [<InlineData("z", "y", "z")>]
 [<InlineData("y", "a", "c")>]
+[<InlineData("m", "h", "v")>]
 let ``DecipherChar gives then correct result`` input output expected =
     Assert.Equal(expected, DecipherChar input output)
 
 [<Theory>]
-[<InlineData("hmkbxebpxpmyllyrxiiqtoltfgzzv", "meetmeontuesdayeveningatseven", "vigilance")>]
+[<InlineData("meetmeontuesdayeveningatseven", "hmkbxebpxpmyllyrxiiqtoltfgzzv", "vigilance")>]
+[<InlineData("meetmebythetree", "egsgqwtahuiljgs", "scones")>]
+[<InlineData("hellofromrussia", "hfnlphoontutufa", "abcabcx")>]
 let ``Can decipher keyword given and input and output`` input output expected = 
     Assert.Equal(expected, Decipher input output)

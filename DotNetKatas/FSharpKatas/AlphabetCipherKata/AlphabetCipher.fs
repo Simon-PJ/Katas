@@ -50,8 +50,19 @@ let Decode input keyword =
     |> Seq.map (fun (x, y) -> DecodeChar x y)
     |> System.String.Concat
 
+let rec FindMinKeyword (keyword:string) input output n =
+    let substring = keyword.[0..n]
+
+    if Encode input substring = output then
+        substring
+    else
+        FindMinKeyword keyword input output (n+1)
+
 let Decipher input output = 
-    input
-    |> Seq.zip output
-    |> Seq.map (fun (x, y) -> DecipherChar x y)
-    |> System.String.Concat
+    let longKeyword = 
+        input
+        |> Seq.zip output
+        |> Seq.map (fun (x, y) -> DecipherChar y x)
+        |> System.String.Concat
+
+    FindMinKeyword longKeyword input output 0
