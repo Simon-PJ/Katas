@@ -68,6 +68,9 @@
     <None Include="AlphabetCipherKata\AlphabetCipherKata.md" />
     <Compile Include="AlphabetCipherKata\AlphabetCipher.fs" />
     <Compile Include="AlphabetCipherKata\AlphabetCipherTests.fs" />
+    <None Include="CardGameWarKata\CardGameWarKata.md" />
+    <Compile Include="CardGameWarKata\CardGameWarKata.fs" />
+    <Compile Include="CardGameWarKata\CardGameWarKataTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
