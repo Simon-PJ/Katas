@@ -71,6 +71,9 @@
     <None Include="CardGameWarKata\CardGameWarKata.md" />
     <Compile Include="CardGameWarKata\CardGameWarKata.fs" />
     <Compile Include="CardGameWarKata\CardGameWarKataTests.fs" />
+    <None Include="WonderlandNumberKata\WonderlandNumberKata.md" />
+    <Compile Include="WonderlandNumberKata\WonderlandNumberKata.fs" />
+    <Compile Include="WonderlandNumberKata\WonderlandNumberKataTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
