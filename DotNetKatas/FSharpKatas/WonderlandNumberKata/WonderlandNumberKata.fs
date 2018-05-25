@@ -16,5 +16,5 @@ let IsWonderlandNumber num =
 
 let WonderlandNumber = 
     [111111..999999] 
-    |> List.filter (fun x -> IsWonderlandNumber x)
+    |> List.filter IsWonderlandNumber
     |> List.head
