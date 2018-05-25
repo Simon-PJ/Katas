@@ -14,11 +14,7 @@ let HasAllTheSameDigits (n1: int) (n2: int) =
 let IsWonderlandNumber num =
     [2..6] |> List.forall (fun x -> HasAllTheSameDigits num (num*x))
 
-let rec CalcWonderlandNumber numUnderTest =
-    if IsWonderlandNumber numUnderTest then
-        numUnderTest
-    else
-        CalcWonderlandNumber (numUnderTest-1)
-
 let WonderlandNumber = 
-    CalcWonderlandNumber 999999
+    [111111..999999] 
+    |> List.filter (fun x -> IsWonderlandNumber x)
+    |> List.head
