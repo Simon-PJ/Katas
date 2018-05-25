@@ -74,6 +74,9 @@
     <None Include="WonderlandNumberKata\WonderlandNumberKata.md" />
     <Compile Include="WonderlandNumberKata\WonderlandNumberKata.fs" />
     <Compile Include="WonderlandNumberKata\WonderlandNumberKataTests.fs" />
+    <None Include="TinyMazeKata\TinyMazeKata.md" />
+    <Compile Include="TinyMazeKata\TinyMazeKata.fs" />
+    <Compile Include="TinyMazeKata\TinyMazeKataTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
